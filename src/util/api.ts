@@ -1,47 +1,31 @@
-const API_BASE =  `https://api-saude-mental-jovens.onrender.com/api`
+const API_BASE = `https://api-saude-mental-jovens.onrender.com/api`;
 
-
-export async function fechAutocuidado():Promise<any>{
-     const res = await fetch(`${API_BASE}/autocuidado`);
-
-     const result =  await res.json();
-
-     return result; 
+export async function fetchAutocuidado(): Promise<any> {
+  const res = await fetch(`${API_BASE}/autocuidado`);
+  return await res.json();
 }
 
-
-export async function fechApoio():Promise<any>{
-     const res = await fetch(`${API_BASE}/apoio`);
-
-     const result =  await res.json();
-
-     return result; 
+export async function fetchApoio(): Promise<any> {
+  const res = await fetch(`${API_BASE}/apoio`);
+  return await res.json();
 }
 
-
-export async function fechBullying():Promise<any>{
-     const res = await fetch(`${API_BASE}/bullying`);
-
-     const result =  await res.json();
-
-     return result; 
+export async function fetchBullying(): Promise<any> {
+  const res = await fetch(`${API_BASE}/bullying`);
+  return await res.json();
 }
-
 
 export async function fetchAutocuidadoById(id: string): Promise<any> {
   const res = await fetch(`${API_BASE}/autocuidado/${id}`);
-  const result = await res.json();
-  return result;
+  return await res.json();
 }
 
 export async function fetchApoioById(id: string): Promise<any> {
   const res = await fetch(`${API_BASE}/apoio/${id}`);
-  const result = await res.json();
-  return result;
+  return await res.json();
 }
 
 export async function fetchBullyingById(id: string): Promise<any> {
   const res = await fetch(`${API_BASE}/bullying/${id}`);
-  const result = await res.json();
-  return result;
+  return await res.json();
 }
