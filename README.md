@@ -1,36 +1,103 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+🧠 Mente Jovem API & Frontend — Saúde Mental para Jovens
+Este projeto é uma iniciativa para facilitar o acesso de jovens a informações confiáveis e úteis sobre saúde mental, reunindo uma API simples e eficiente com um frontend moderno em Next.js. O foco está em promover bem-estar, apoio emocional e conscientização sobre bullying.
 
-## Getting Started
+🌍 Objetivo
+Oferecer uma plataforma que apresente de forma clara e agradável conteúdos relacionados a:
 
-First, run the development server:
+Técnicas práticas de autocuidado
 
-```bash
+Canais de apoio emocional e psicológico
+
+Informações sobre bullying: o que é, tipos e como agir
+
+Tudo isso com uma interface amigável, responsiva e animada, pensada especialmente para o público jovem.
+
+🔧 Tecnologias Utilizadas
+Backend (API)
+Node.js
+
+Express.js
+
+Frontend
+Next.js 15
+
+React 19
+
+TypeScript
+
+TailwindCSS
+
+Framer Motion (para animações)
+
+React Icons
+
+🧱 Estrutura da API
+A API oferece três rotas principais do tipo GET:
+
+Rota	Descrição
+/api/autocuidado	Lista técnicas simples de autocuidado diário
+/api/apoio	Mostra canais de apoio emocional
+/api/bullying	Explica o que é bullying e como agir
+
+Além disso, é possível buscar itens por ID em cada rota:
+
+/api/autocuidado/:id
+
+/api/apoio/:id
+
+/api/bullying/:id
+
+🚀 Frontend — Funcionalidades
+Consumo dinâmico das rotas da API
+
+Renderização de cards com dados reais
+
+Navegação suave entre seções na landing page única
+
+Componentização modular e organizada
+
+Estilização moderna com TailwindCSS e fontes personalizadas
+
+Animações com Framer Motion para melhor experiência
+
+Implementação inicial do modo claro/escuro (toggle funcional, porém o modo escuro ainda está em fase final de ajustes)
+
+🛠 Como executar
+API
+bash
+Copiar
+Editar
+npm install
+node index.js
+A API estará disponível em http://localhost:3000/api.
+
+Frontend
+bash
+Copiar
+Editar
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Acesse o frontend em http://localhost:3000.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+📁 Links importantes
+Repositório API: https://github.com/MateusFelipe64/Mente-Jovem-API
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Repositório Frontend: https://github.com/MateusFelipe64/Mine-Project-M5
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+API em produção: https://api-saude-mental-jovens.onrender.com/api
 
-## Learn More
+🖼️ Imagens e Demonstrações
 
-To learn more about Next.js, take a look at the following resources:
+Landing page com cards dinâmicos exibindo técnicas e canais de apoio.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Seção dedicada ao autocuidado com dados consumidos da API.
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Toggle de modo escuro implementado, ajustes finais em andamento.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+🙋 Sobre o desenvolvedor
+Este projeto foi criado por Mateus Felipe, estudante de programação, com o apoio do programa Programadores do Amanhã (PDA). A ideia é unir tecnologia e saúde mental para oferecer um recurso acessível e educativo para jovens em todo o Brasil.
+
+💡 Nota importante
+O modo claro/escuro já está funcional com um toggle, mas a implementação do modo escuro está ainda em processo de finalização. Nos próximos dias serão feitos ajustes visuais para garantir a melhor experiência possível.
