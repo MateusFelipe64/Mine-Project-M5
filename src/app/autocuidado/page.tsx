@@ -1,19 +1,10 @@
-import CardList from "@/components/CardList/page";
-import { fetchAutocuidado } from "../../lib/api";
-import AutocuidadoCard from "@/components/AutocuidadoCard/page";
-export default async function AutocuidadoPage() {
-  const data = await fetchAutocuidado();
+import AutocuidadoPageClient from "./AutocuidadoPageClient";
 
-  return (
-    <CardList title="Autocuidado">
-      {data.map((item: any) => (
-        <AutocuidadoCard
-          key={item._id}
-          id={item._id}
-          title={item.title}
-          description={item.content}
-        />
-      ))}
-    </CardList>
-  );
+export const metadata = {
+  title: "Autocuidado - Mentaliza Z",
+  description: "Técnicas e práticas para cuidar da saúde mental no dia a dia",
+};
+
+export default function AutocuidadoPage() {
+  return <AutocuidadoPageClient />;
 }

@@ -1,20 +1,10 @@
-import ApoioCard from "@/components/ApoioCard/page";
-import CardList from "@/components/CardList/page";
-import { fetchApoio } from "@/lib/api";
+import ApoioPageClient from "./ApoioPageClient";
 
-export default async function ApoioPage() {
-  const data = await fetchApoio();
+export const metadata = {
+  title: "Apoio - Mentaliza Z",
+  description: "Recursos e suporte para sua saúde mental",
+};
 
-  return (
-    <CardList title="Apoio">
-      {data.map((item: any) => (
-        <ApoioCard
-          key={item._id}
-          id={item._id}
-          title={item.title}
-          description={item.content}
-        />
-      ))}
-    </CardList>
-  );
+export default function ApoioPage() {
+  return <ApoioPageClient />;
 }
